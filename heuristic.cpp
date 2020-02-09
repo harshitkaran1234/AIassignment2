@@ -1,5 +1,5 @@
 /*We have taken heuristic function as sum of index where queen is placed in each row. Fo ex- queen is placed at {1,1,1,1,1,1,1,1} then h=8.So, we are going to place all queen in possible place and find corresponding "h". One with least "h" will be explored. 
-Initial state is {1,1,1,1,1,1,1,1} where each value denotes position of queen in each row, state transition :- we can give any right value between 1 to 8. As for least "h" we have to place queen in next possible index of compared to previous one. So algorithm is as follows-:*/ 
+Initial state is {0,0,0,0,0,0,0,0} where each value denotes position of queen in each row, state transition :- we can give any right value between 1 to 8. As for least "h" we have to place queen in next possible index of compared to previous one. So algorithm is as follows-:*/ 
 
 #include<iostream>
 using namespace std;
@@ -10,7 +10,7 @@ int main(){
   for(int i=1;i<9;i++){
       array[i]=0;//queen is not placed so undefined value will be set which is 0 here
   }
-  int a[9]={0,1,2,3,4,5,6,7,8};
+  int a[9]={0,1,2,3,4,5,6,7,8};//we have created list of all possible values where queen can be placed, and we will select value with least h.
   int flag1,flag2,k=0,j;
   flag1=0;
   flag2=0;
